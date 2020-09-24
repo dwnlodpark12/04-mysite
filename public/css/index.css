@@ -123,8 +123,9 @@ html, body {
 	width: 16px;
 	height: 16px;
 }
-.header-bottom .hb-right .tap-bar>span {
-	width: 50px; 
+.header-bottom .hb-right .tab-bar > span {
+	display: inline-block;
+	width: 50px;
 	height: 16px;
 	background: transparent;
 	border: 1px solid #000;
