@@ -7,6 +7,7 @@ html, body {
 	font-weight: 400;
 	letter-spacing: -0.3px;
 	background-color: #f8f8f8;
+	max-width: 1920px;
 }
 
 /********* header **********/
@@ -142,20 +143,22 @@ html, body {
 }
 
 
-/*********** main-visual ***********/
+/********** main-visual **********/
 .main-wrapper {
 	width: 90vw;
-	max-width: 100%;
+	/* max-width: 100%; */
 	height: auto;
 	border: 1px solid #000000;
+	box-sizing: border-box;
 	margin: 0 auto;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
+	
 }
 .main-wrapper .main-left {
 	width: 50%;
-	height: 100%;
+	height: inherit;
 	border-right: 1px solid #000;
 	box-sizing: border-box;
 }
@@ -192,23 +195,95 @@ html, body {
 }
 .main-wrapper .main-right {
 	width: 50%;
-	height: 100%;
+	height: inherit;
 	position: relative;
 }
 .main-wrapper .main-right .slide-wrap {
-	width: auto;
-	height: 80%;
+	width: 19vw;
+	height: inherit;
 	position: absolute;
-	top: calc(50% - 3vw); left: 50%;
+	top: 8vw; left: calc(50% - 9vw);
 }
-.main-wrapper .main-right .slide-wrap .img-wrap {
-	margin: auto;
+.main-wrapper .main-right .slide-wrap .img-wrapper {
+	width: 100%;
+	height: inherit;
 }
-.main-wrapper .main-right .slide-wrap .img-wrap img {}
-.main-wrapper .main-right .slide-wrap .img-wrap .add-cart {}
-.main-wrapper .main-right .slide-wrap .txt-wrap {}
-.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l{}
-.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l .title{}
-.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l .detail{}
-.main-wrapper .main-right .slide-wrap .txt-wrap .price{}
-.main-wrapper .main-right .dots {}
+.main-wrapper .main-right .slide-wrap .img-wrapper .img-wrap {
+	position: relative;
+}
+.main-wrapper .main-right .slide-wrap .img-wrapper img {
+	width: 19vw;
+	
+}
+.main-wrapper .main-right .slide-wrap .img-wrapper .img-wrap .add-cart {
+	position: absolute;
+	bottom: 0; left: 48%;
+	transform: translateX(-50%);
+	padding: 16px 32px;
+	background-color: #f8f8f8;
+	font-size: 14px;
+	font-weight: 500;
+	color: #333;
+	display: none;
+	transition: all 0.3s;
+}
+.main-wrapper .main-right:hover .slide-wrap .img-wrapper .img-wrap .add-cart {
+	display: block;
+}
+.main-wrapper .main-right .slide-wrap .img-wrapper .img-wrap .add-cart:hover {
+	background-color: #000;
+	color: #f8f8f8;
+}
+.main-wrapper .main-right .slide-wrap .txt-wrap {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l{
+	line-height: 1.2;
+}
+.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l .title{
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 22px;
+}
+.main-wrapper .main-right .slide-wrap .txt-wrap .txt-l .detail{
+	margin-top: 16px;
+}
+.main-wrapper .main-right .slide-wrap .txt-wrap .price{
+	margin-top: 8px;
+}
+.main-wrapper .main-right .dots {
+	width: 7vw;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 7%; right: 7%;
+}
+.main-wrapper .main-right .dots .dot {
+	width: 16px; height: 16px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background-color: transparent;
+	margin: 0 4px;
+}
+.main-wrapper .main-right .dots .dot.active {
+	background-color: #000;
+}
+
+
+/********** phrase **********/
+.phrase {
+	margin: 200px 0;
+}
+.phrase p {
+	font-size: 160px;
+	font-weight: 700;
+	color: #f8f8f8;
+	text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;  
+}
