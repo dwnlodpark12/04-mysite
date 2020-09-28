@@ -288,3 +288,30 @@ html, body {
 	1px 1px 0 #000;  
 	word-break: nowrap;
 }
+
+/********** Selection **********/
+.selection-wrapper {
+	width: 70%;
+	margin: auto;
+}
+.selection-wrapper .title-wrap {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #000;
+}
+.selection-wrapper .title-wrap h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 56px;
+	font-weight: 400;
+
+}
+.selection-wrapper .title-wrap .img-wrap {}
+.selection-wrapper .title-wrap .img-wrap img {
+	transition: all 0.2s;
+}
+.selection-wrapper .title-wrap .img-wrap:hover img {
+	transform: rotate(-45deg);
+}
+
