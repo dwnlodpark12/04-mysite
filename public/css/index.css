@@ -255,7 +255,7 @@ html, body {
 	margin-top: 8px;
 }
 .main-wrapper .main-right .dots {
-	width: 7vw;
+	width: 15%;
 	display: flex;
 	justify-content: space-around;
 	position: absolute;
@@ -279,11 +279,12 @@ html, body {
 }
 .phrase p {
 	font-size: 160px;
-	font-weight: 700;
+	font-weight: 400;
 	color: #f8f8f8;
 	text-shadow:
 	-1px -1px 0 #000,
 	1px -1px 0 #000,
 	-1px 1px 0 #000,
 	1px 1px 0 #000;  
+	word-break: nowrap;
 }
