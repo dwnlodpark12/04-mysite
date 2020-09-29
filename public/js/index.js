@@ -1,22 +1,20 @@
 
-/* 
-function onScroll() {
-	$(".phrase").find("p.wide").css({
-		"transform": "translateX(pageY)",
-		"transition": "all 2s"
-	});
+$(window).scroll(function () {
+	var height = $(document).scrollTop();
+
+	console.log(height);
+
+	/* if ( height > 0 ) {
+		$(".phrase").find("p.wide").css({
+			"transform":"translateX("+height+")",
+			"trasition":"all 1s"
+		});
+	}
+	else {
+		
+	} */
+});
+
+function log(str){
+$(document).text(str);
 }
-
-$(window).scroll(onScroll);
- */
-
-var wheelY = $(window).height();
-
-function onScroll() {
-	$(".phrase").find("p.wide").css({
-		"transform": "translateX(wheelY)",
-		"transition": "all 2s"
-	});
-}
-
-$(window).scroll(onScroll);
