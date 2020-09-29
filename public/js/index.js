@@ -1,20 +1,8 @@
 
 $(window).scroll(function () {
-	var height = $(document).scrollTop();
-
-	console.log(height);
-
-	/* if ( height > 0 ) {
-		$(".phrase").find("p.wide").css({
-			"transform":"translateX("+height+")",
-			"trasition":"all 1s"
-		});
+	var sctop = $(document).scrollTop();
+	if(sctop > 100) {
+		$(".wide").css("transform", "translateX(-"+sctop+"px)");
 	}
-	else {
-		
-	} */
 });
 
-function log(str){
-$(document).text(str);
-}
