@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/********* 공통사항 **********/
 html, body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -315,4 +316,89 @@ html, body {
 .selection-wrapper .title-wrap .img-wrap:hover img {
 	transform: rotate(-45deg);
 }
+.selection-wrapper .list-wrap {
+	padding-top: 30px;
+}
+.selection-wrapper ul.lists {
+	width: 100%; height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.selection-wrapper ul.lists li.list {
+	border: 2px solid rebeccapurple;
+	margin-bottom: 40px;
+}
+.selection-wrapper ul.lists li.list a {
+	display: block;
+	cursor: pointer;
+}
+.selection-wrapper ul.lists li.list .img-wrapper {
 
+}
+.selection-wrapper .list-wrap .img-wrapper .img-wrap {
+	position: relative;
+}
+.selection-wrapper .list-wrap .img-wrapper .img-wrap img {
+	width: 16vw;
+}
+.selection-wrapper .list-wrap .img-wrapper .img-wrap .sale {
+	position: absolute;
+	top: 0; right: 0;
+	transform-origin: top right;
+	width: 48px;
+	padding: 8px 8px;
+	background-color: #fff;
+	color: #000000;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+}
+.selection-wrapper ul.lists li.list .img-wrap .add-cart {
+	position: absolute;
+	bottom: 0; left: 48%;
+	transform: translateX(-50%);
+	padding: 16px 32px;
+	background-color: #f8f8f8;
+	font-size: 14px;
+	font-weight: 500;
+	color: #333;
+	display: none;
+	transition: all 0.3s;
+}
+.selection-wrapper ul.lists li.list:hover .img-wrap .add-cart {
+	display: block;
+	/* background-color: #000;
+	color: #f8f8f8; */
+}
+.selection-wrapper ul.lists li.list .img-wrap:hover .add-cart {
+	background-color: #000;
+	color: #f8f8f8;
+}
+.selection-wrapper ul.lists li.list .txt-wrap {
+	margin-top: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-l {
+line-height: 2;
+}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	font-weight: 400;
+}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-l .detail {}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-r {
+	text-align: right;
+	display: flex;
+	align-items: center;
+}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-r .past-price {
+	display: inline;
+	margin-right: 10px;
+	text-decoration: line-through #000;
+}
+.selection-wrapper ul.lists li.list .txt-wrap .txt-r .price {
+
+}
