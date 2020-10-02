@@ -294,8 +294,9 @@ html, body {
 
 /********** Selection **********/
 .selection-wrapper {
-	width: 70%;
+	width: 80vw;
 	margin: auto;
+	margin-bottom: 80px;
 }
 .selection-wrapper .title-wrap {
 	display: flex; 
@@ -326,7 +327,6 @@ html, body {
 	flex-wrap: wrap;
 }
 .selection-wrapper ul.lists li.list {
-	border: 2px solid rebeccapurple;
 	margin-bottom: 40px;
 }
 .selection-wrapper ul.lists li.list a {
@@ -334,13 +334,13 @@ html, body {
 	cursor: pointer;
 }
 .selection-wrapper ul.lists li.list .img-wrapper {
-
+	
 }
 .selection-wrapper .list-wrap .img-wrapper .img-wrap {
 	position: relative;
 }
 .selection-wrapper .list-wrap .img-wrapper .img-wrap img {
-	width: 16vw;
+	width: 18vw;
 }
 .selection-wrapper .list-wrap .img-wrapper .img-wrap .sale {
 	position: absolute;
@@ -356,11 +356,11 @@ html, body {
 }
 .selection-wrapper ul.lists li.list .img-wrap .add-cart {
 	position: absolute;
-	bottom: 0; left: 48%;
+	bottom: 0; left: 50%;
 	transform: translateX(-50%);
 	padding: 16px 32px;
 	background-color: #f8f8f8;
-	font-size: 14px;
+	font-size: 0.75rem;
 	font-weight: 500;
 	color: #333;
 	display: none;
@@ -368,10 +368,9 @@ html, body {
 }
 .selection-wrapper ul.lists li.list:hover .img-wrap .add-cart {
 	display: block;
-	/* background-color: #000;
-	color: #f8f8f8; */
+	
 }
-.selection-wrapper ul.lists li.list .img-wrap:hover .add-cart {
+.selection-wrapper ul.lists li.list .img-wrap .add-cart:hover {
 	background-color: #000;
 	color: #f8f8f8;
 }
@@ -381,7 +380,7 @@ html, body {
 	justify-content: space-between;
 }
 .selection-wrapper ul.lists li.list .txt-wrap .txt-l {
-line-height: 2;
+	line-height: 2;
 }
 .selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {
 	font-family: 'Playfair Display', serif;
@@ -400,5 +399,22 @@ line-height: 2;
 	text-decoration: line-through #000;
 }
 .selection-wrapper ul.lists li.list .txt-wrap .txt-r .price {
-
+	
 }
+
+/********** play-Ani **********/
+
+.play-wrap {
+	position: relative;
+}
+.play-wrap >img {
+	width: 100%;
+	height: 100%;
+}
+.play-wrap .play img {
+	position: absolute;
+	top: 0; left: 0;
+	width: 80%;
+}
+
+
