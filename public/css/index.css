@@ -59,11 +59,6 @@ html, body {
 }
 .header-bottom .hb-left .logo {padding-right: 30px;}
 
-.header-bottom .hb-left ul.navi-wrap li {
-	margin-right: 35px;
-	font-size: 14px;
-	font-weight: 400;
-}
 
 .header-bottom .hb-left .logo img {
 	width: 50px;
@@ -74,13 +69,20 @@ html, body {
 .header-bottom .hb-left ul.navi-wrap {
 	display: flex;
 	flex-wrap: wrap;
-	
 }
-.header-bottom .hb-left ul.navi-wrap li:first-child {
+.header-bottom .hb-left ul.navi-wrap li {
+	margin-right: 35px;
+	font-size: 14px;
+	font-weight: 400;
+	/* transition: all 0.9s; */
+}
+.header-bottom .hb-left ul.navi-wrap li.home{
 	border-bottom:1px solid #000;
-	
-
 }
+.header-bottom .hb-left ul.navi-wrap li:hover {
+	border-bottom:1px solid #000;
+}
+
 .header-bottom .hb-right {
 	display: flex; 
 	align-items: center;
@@ -158,7 +160,7 @@ html, body {
 	
 }
 .main-wrapper .main-left {
-	width: 50%;
+	width: 49%;
 	height: inherit;
 	border-right: 1px solid #000;
 	box-sizing: border-box;
@@ -276,7 +278,7 @@ html, body {
 
 /********** phrase **********/
 .phrase {
-	margin: 200px 0;
+	margin: 160px 0;
 	overflow-x: hidden;
 }
 .phrase p {
@@ -404,17 +406,185 @@ html, body {
 
 /********** play-Ani **********/
 
-.play-wrap {
-	position: relative;
+.play-wrapper {
+	margin-bottom: 160px;
 }
-.play-wrap >img {
+.play-wrapper .play-bgwrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+}
+.play-wrapper .play-bgwrap img.play-bg {
 	width: 100%;
 	height: 100%;
 }
-.play-wrap .play img {
-	position: absolute;
-	top: 0; left: 0;
+.play-wrapper .play-bgwrap .play-wrap {
+	
+}
+.play-wrapper .play-bgwrap .play-wrap img.play {
 	width: 80%;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/********** categories **********/
+
+.pop-wrapper {
+	width: 85vw;
+	margin: auto;
+	margin-bottom: 160px;
+}
+.pop-wrapper h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 56px;
+	font-weight: 400;
+	width: 100%;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #000;
+}
+.pop-wrapper ul.pop-wrap {}
+
+.pop-wrapper ul.pop-wrap li.pop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 0;
+	border-bottom: 1px solid #000;
+	cursor: pointer;
+}
+.pop-wrapper ul.pop-wrap li.pop .title {}
+.pop-wrapper ul.pop-wrap li.pop .title .main {
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 10px;
+	font-size: 28px;
+	font-weight: 400;
+}
+.pop-wrapper ul.pop-wrap li.pop .title .sub {}
+.pop-wrapper ul.pop-wrap li.pop .arrow {
+}
+.pop-wrapper ul.pop-wrap li.pop .arrow img {
+	transition: all 0.2s;
+	width: 52px;
+	
+}
+.pop-wrapper ul.pop-wrap li.pop:hover .arrow img {
+	transform: rotate(-45deg);
 }
 
 
+/********** banner-wrap **********/
+.banner-wrap {
+	width: 90vw;
+	height: 320px;
+	margin: auto;
+	border: 1px solid #000;
+	margin-bottom: 160px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.banner-wrap .bann-left {
+	width: 49%;
+	height: 100%;
+	border-right: 1px solid #000;
+	overflow: hidden;
+}
+.banner-wrap .bann-left img {
+	width: 100%;
+}
+.banner-wrap .bann-right {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	top: 40%; left: 5%;
+}
+.banner-wrap .bann-right .summer {
+	margin-bottom: 16px;
+}
+.banner-wrap .bann-right .summer .dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #000;
+	display: inline-block;
+	margin-right: 5px;
+}
+.banner-wrap .bann-right .miss {
+	font-family: 'Playfair Display', serif;
+	font-size: 40px;
+	line-height: 1.2;
+}
+
+
+/********** footer **********/
+
+footer {
+	width: 92vw;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+footer .f-left {
+	width: 33.3333%;
+	padding: 40px;
+
+}
+footer .f-left h3 {
+	padding-bottom: 80px;
+}
+footer .f-left h3 img {
+	width: 180px;
+}
+footer .f-left .copy {
+	color: #888;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+footer .f-right {
+	width: 66.6666%;
+	border-top: 1px solid #000;
+}
+footer .f-right ul.f-lists {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+footer .f-right ul.f-lists li.list {
+	margin: 40px 100px 0 0;
+}
+footer .f-right ul.f-lists li.list .title {
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	font-weight: 400;
+	padding-bottom: 20px;
+}
+footer .f-right ul.f-lists li.list ul.contents {
+	font-size: 1rem;
+}
+
+footer .f-right ul.f-lists li.list:last-child ul.contents {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+footer .f-right ul.f-lists li.list ul.contents li.cont {
+	cursor: pointer;
+}
+
+footer .f-right ul.f-lists li.list ul.contents li.circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 12px;
+	line-height: 38px;
+	margin-right: 20px;
+}
+footer .f-right ul.f-lists li.list ul.contents li.circle:last-child {
+	margin: 0;
+}

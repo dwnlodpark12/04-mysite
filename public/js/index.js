@@ -17,3 +17,8 @@ $(window).scroll(function () {
 	}
 });
 
+/************* play mouse hover-ani **************/
+$(".play-bgwrap").mousehover(function(e) {
+	$("img.play").css("transform","translateX(-30%)");
+	$("img.play").css("transform","translateY(30%)");
+});
