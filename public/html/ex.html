@@ -18,13 +18,9 @@
      height: 50px;
      border-radius: 50%;
      border: 2px solid #000000;
-     margin: 10px;
+     margin: 50px;
      line-height: 48px;
-     transition: all 4s;
-     box-sizing: border-box;
-   }
-   .box:hover {
-     border: 0;
+     transition: all 1s;
    }
 
   </style>
@@ -37,6 +33,12 @@
   </div>
 </body>
   <script>
+    $(".box").mouseenter(function(){
+      $(this).animate({left:"100px"},1000)
 
+    });
+    $(".box").mouseleave(function(){
+      $(this).stop();
+    });
   </script>
 </html>

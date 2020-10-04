@@ -1,4 +1,12 @@
 /************* 네비게이션 **************/
+$(".navi-wrap").find("li.navi").mouseenter(function() {
+	$("ul.navi-lists").stop().slideDown();
+});
+$("li.navi").find("ul.navi-lists").mouseleave(function() {
+	$(this).slideUp();
+});
+/************* dark-mode **************/
+
 
 
 
@@ -17,8 +25,16 @@ $(window).scroll(function () {
 	}
 });
 
-/************* play mouse hover-ani **************/
-$(".play-bgwrap").mousehover(function(e) {
-	$("img.play").css("transform","translateX(-30%)");
-	$("img.play").css("transform","translateY(30%)");
+/************* play mouseAni **************/
+/* $(".play-bgwrap").mouseomve(function(e) {
+	$("img.play").css("transform","translateX(e.pageX)");
+	$("img.play").css("transform","translateY(e.pageY)");
+});
+ */
+/************* pop-hoverAni **************/
+$("li.pop").hover(function() { //마우스 enter 했을 때 
+	$(".img-hover").css("display","block");
+},
+function() { //마우스 leave했을 때
+	$(".img-hover").css("display","none");
 });

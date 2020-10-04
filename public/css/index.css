@@ -10,7 +10,10 @@ html, body {
 	background-color: #f8f8f8;
 	max-width: 1920px;
 }
-
+body.dark-mode {
+	background-color: #1d1d1d;
+	color: #fff;
+}
 /********* header **********/
 
 
@@ -75,13 +78,37 @@ html, body {
 	font-size: 14px;
 	font-weight: 400;
 	/* transition: all 0.9s; */
+	position: relative;
+	cursor: pointer;
 }
 .header-bottom .hb-left ul.navi-wrap li.home{
 	border-bottom:1px solid #000;
 }
-.header-bottom .hb-left ul.navi-wrap li:hover {
+.header-bottom .hb-left ul.navi-wrap li.navi:hover {
 	border-bottom:1px solid #000;
 }
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists {
+	position: absolute;
+	left: -100%;
+	z-index: 2;
+	background-color: #fff;
+	opacity: 0.9;
+	top: 66px;
+	width: 300px;
+	padding: 32px;
+	display: none;
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 2.4;
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list a {
+	display: block;
+}
+
+
+
 
 .header-bottom .hb-right {
 	display: flex; 
@@ -120,7 +147,12 @@ html, body {
 	border: 1px solid #000;
 	border-radius: 50%;
 	position: absolute;
+	transition: all 0.6s;
 }
+.header-bottom .hb-right .dark-mode .switch .dot.dark {
+	left: 50%;
+}
+
 .header-bottom .hb-right .sun img {
 	width: 16px;
 	height: 16px;
@@ -149,7 +181,7 @@ html, body {
 /********** main-visual **********/
 .main-wrapper {
 	width: 90vw;
-	/* max-width: 100%; */
+	max-width: 100%;
 	height: auto;
 	border: 1px solid #000000;
 	box-sizing: border-box;
@@ -442,9 +474,11 @@ html, body {
 	font-weight: 400;
 	width: 100%;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #000;
+	border-bottom: 2px solid #000;
 }
-.pop-wrapper ul.pop-wrap {}
+.pop-wrapper ul.pop-wrap {
+	position: relative;
+}
 
 .pop-wrapper ul.pop-wrap li.pop {
 	display: flex;
@@ -453,6 +487,7 @@ html, body {
 	padding: 16px 0;
 	border-bottom: 1px solid #000;
 	cursor: pointer;
+
 }
 .pop-wrapper ul.pop-wrap li.pop .title {}
 .pop-wrapper ul.pop-wrap li.pop .title .main {
@@ -471,6 +506,24 @@ html, body {
 }
 .pop-wrapper ul.pop-wrap li.pop:hover .arrow img {
 	transform: rotate(-45deg);
+}
+.pop-wrapper ul.pop-wrap li.pop .title .img-hover {
+	position: absolute;
+	top: 16%; right: 16%;
+	width: 42%;
+	display: none;
+}
+.pop-wrapper ul.pop-wrap li.pop .title .img-hover img {
+	width: 100%;
+}
+.pop-wrapper ul.pop-wrap li.pop:hover .title .img-hover {
+	display: block;
+	animation-name: hoverAni;
+}
+
+@keyframes hoverAni {
+	0% {transform: scale(1.2);}
+	100% {transform: scale(1);}
 }
 
 
@@ -588,3 +641,4 @@ footer .f-right ul.f-lists li.list ul.contents li.circle {
 footer .f-right ul.f-lists li.list ul.contents li.circle:last-child {
 	margin: 0;
 }
+
