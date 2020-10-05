@@ -48,12 +48,18 @@ $("li.pop").mouseenter(popEnter);
 $("li.pop").mouseleave(popLeave);
 
 function popEnter() {
-	$(".img-hover").css({
-		"transform":"scaleX(1.2)",
-		"transform":"scaleX(1)"
-		
-	});
+	$(this).find(".img-hover").css("display", "block");
+	$(this).find(".img-hover img").css("transform");
+	$(this).find(".img-hover img").css("transform", "scaleX(1)");
 }
 function popLeave() {
-
+	$(this).find(".img-hover img").css("transform", "scaleX(1.3)");
+	$(this).find(".img-hover").css("display", "none");
 }
+
+$(".play-wrap .play").mousemove(function(e){
+	var x = e.offsetX;
+	var y = e.offsetY;
+	$(this).css({"left": x+"px", "top": y+"px"});
+	console.log(x, y);
+});

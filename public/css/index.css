@@ -449,13 +449,12 @@ body.dark-mode {
 	height: 100%;
 }
 .play-wrapper .play-bgwrap .play-wrap {
-	
+
 }
 .play-wrapper .play-bgwrap .play-wrap img.play {
-	width: 80%;
 	position: absolute;
 	top: 50%; left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
 
 /********** categories **********/
@@ -517,7 +516,10 @@ body.dark-mode {
 }
 .pop-wrapper ul.pop-wrap li.pop .title .img-hover img {
 	width: 100%;
+	transition: all 1s;
+	transform: scaleX(1.3);
 }
+/*
 .pop-wrapper ul.pop-wrap li.pop:hover .title .img-hover {
 	display: block;
 	animation-name: hoverAni;
@@ -529,6 +531,7 @@ body.dark-mode {
 	0% {transform: scaleX(1.2);}
 	100% {transform: scale(1);}
 }
+*/
 
 
 /********** banner-wrap **********/
