@@ -19,11 +19,8 @@ function onDarkMode() {
 		"background-color":"inherit",
 		"border":"1px solid #fff"
 });
-	$("body").addClass("dark-mode");
+	$("body").toggleClass("dark-mode");
 }
-
-
-
 
 /************* .main-slide **************/
 
@@ -33,6 +30,7 @@ function onDarkMode() {
 /************* text 슬라이드 **************/
 $(window).scroll(function () {
 	var sctop = $(document).scrollTop();
+	console.log(sctop);
 	if(sctop > 100) {
 		$(".wide").css("transform", "translateX(-"+sctop+"px)");
 	}
@@ -45,9 +43,17 @@ $(window).scroll(function () {
 });
  */
 /************* pop-hoverAni **************/
-$("li.pop").hover(function() { //마우스 enter 했을 때 
-	$(".img-hover").css("display","block");
-},
-function() { //마우스 leave했을 때
-	$(".img-hover").css("display","none");
-});
+
+$("li.pop").mouseenter(popEnter);
+$("li.pop").mouseleave(popLeave);
+
+function popEnter() {
+	$(".img-hover").css({
+		"transform":"scaleX(1.2)",
+		"transform":"scaleX(1)"
+		
+	});
+}
+function popLeave() {
+
+}
