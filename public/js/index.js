@@ -1,13 +1,26 @@
 /************* 네비게이션 **************/
-$(".navi-wrap").find("li.navi").mouseenter(function() {
-	$("ul.navi-lists").stop().slideDown();
-});
-$("li.navi").find("ul.navi-lists").mouseleave(function() {
-	$(this).slideUp();
-});
+$("li.navi").mouseenter(onEnter);
+$("li.navi").mouseleave(onLeave);
+
+function onEnter() {
+	$(this).find(".navi-lists").stop().slideDown();
+}
+
+function onLeave() {
+	$(this).children(".navi-lists").stop().slideUp();
+}
+
 /************* dark-mode **************/
+$(".dark-mode").click(onDarkMode);
 
-
+function onDarkMode() {
+	$(this).find("a.dot").css({
+		"left":"26px",
+		"background-color":"inherit",
+		"border":"1px solid #fff"
+});
+	$("body").addClass("dark-mode");
+}
 
 
 
