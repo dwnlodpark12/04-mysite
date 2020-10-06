@@ -23,7 +23,23 @@ function onDarkMode() {
 }
 
 /************* .main-slide **************/
+(function() {
+	var slides = [
+		{id: 0, src: '../img/main1-1.jpg', title: 'Red Watch', categ:'Digital', price:'45.50€'},
+		{id: 1, src: '../img/main1-2.jpg', title: 'Sweater Print', categ:'Urban', price:'45.50€'},
+		{id: 2, src: '../img/main1-3.jpg', title: 'Framed Poster', categ:'Vision', price:'45.50€'},
+		{id: 3, src: '../img/main1-4.jpg', title: 'Trendy Bags', categ:'Creative', price:'45.50€'}
+	];
 
+	var $slideStage = $(".main-right .stage");
+	var $slideWrap = $(".main-right .slide-wrap");
+	var $pagerWrap = $(".main-right .pager-wrap");
+	var $pager;				// 생성된 $(".wrapper6 .pager")
+	var $slides = [];	// $(".slide")들 모두를 담아놓는 배열(필요할때 복사해서 가져다 쓴다)
+	var idx = 0;											// 현재 화면에 보이는 slide의 index
+	var lastIdx = slides.length - 1;	// $(".slide")들 중에 마지막 index
+	var interval;											// setInterval을 담아놓는 변수
+})();
 
 
 
