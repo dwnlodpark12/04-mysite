@@ -57,9 +57,19 @@ function popLeave() {
 	$(this).find(".img-hover").css("display", "none");
 }
 
+
+
 $(".play-wrap .play").mousemove(function(e){
 	var x = e.offsetX;
 	var y = e.offsetY;
-	$(this).css({"left": x+"px", "top": y+"px"});
-	console.log(x, y);
+	var wid = $(this).outerWidth() / 2;
+	var hei = $(this).outerHeight() / 2;
+	var tarX = x - wid;
+	var tarY = y - hei;
+	if(tarX > -300 && tarX < 300 && tarY > -100 && tarY < 100) {
+		$(this).css("transform", "translate("+tarX+"px,"+tarY+"px)");
+	}
+	else {
+		$(this).css("transform", "translate(0, 0)");
+	}
 });
