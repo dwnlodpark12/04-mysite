@@ -66,7 +66,7 @@ $(".play-wrap .play").mousemove(function(e){
 	var hei = $(this).outerHeight() / 2;
 	var tarX = x - wid;
 	var tarY = y - hei;
-	if(tarX > -300 && tarX < 300 && tarY > -100 && tarY < 100) {
+	if(tarX > -300 && tarX < 300 && tarY > -150 && tarY < 150) {
 		$(this).css("transform", "translate("+tarX+"px,"+tarY+"px)");
 	}
 	else {

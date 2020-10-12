@@ -84,9 +84,6 @@ body.dark-mode {
 	position: relative;
 	cursor: pointer;
 }
-.header-bottom .hb-left ul.navi-wrap li.navi:hover {
-	border-bottom:1px solid #000;
-}
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists {
 	position: absolute;
 	left: -50%;
@@ -101,11 +98,18 @@ body.dark-mode {
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list {
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 2.4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+	transition: all 1s;
+	box-sizing: border-box;
 }
-.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list a {
-	display: block;
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list::after {
+	
 }
+
+
 
 .header-bottom .hb-right {
 	display: flex; 
@@ -456,7 +460,6 @@ body.dark-mode {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 10px solid red;
 }
 .play-wrapper .play-bgwrap .play-wrap img.play {
 	transition: all 0.3s;
@@ -517,7 +520,6 @@ body.dark-mode {
 	width: 36%;
 	height: 70%;
 	display: none;
-	border: 2px solid rebeccapurple;
 	overflow: hidden;
 }
 .pop-wrapper ul.pop-wrap li.pop .title .img-hover img {
