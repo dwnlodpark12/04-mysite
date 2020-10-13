@@ -243,6 +243,32 @@ body.dark {
 	top: 8vw; left: calc(50% - 9vw);
 }
 
+.main-wrapper .main-right .slide-wrap .slide {
+	border: 2px solid rebeccapurple;
+}
+.main-wrapper .main-right .slide-wrap .slide .txt-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.875rem;
+}
+.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l {
+
+}
+.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l h3.img-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.25rem;
+
+}
+.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l .img-categ {
+	padding: 0.75rem 0;
+}
+.main-wrapper .main-right .slide-wrap .slide .txt-wrap .img-price {}
+
+span.pager {
+	width: 100vh;
+}
+
 
 /********** phrase **********/
 .phrase {
@@ -590,6 +616,20 @@ footer .f-right ul.f-lists li.list ul.contents li.circle {
 }
 footer .f-right ul.f-lists li.list ul.contents li.circle:last-child {
 	margin: 0;
+}
+
+
+/************* back-top *************/
+.back-top {
+	width: 120px;
+	text-align: center;
+	transform: rotate(-90deg);
+	border: 1px solid #000;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 20%; right: 2%;
+	padding: 0.5rem;
+	white-space: nowrap;
 }
 
 
