@@ -18,8 +18,15 @@ function onDarkMode() {
 		"left":"26px",
 		"background-color":"inherit",
 		"border":"1px solid #fff"
-});
-	$("body").toggleClass("dark-mode");
+	});
+	$(this).find(".switch").css("border-color","#fff"),
+	$(this).find("img.sun-w").attr("src","../img/sun_white.svg"),
+	$(this).find("img.moon-w").attr("src","../img/moon_white.svg"),
+	$(".tab-bar").find(".bar").css("border-color","#fff"),
+	$(".logo-wrap").find(".logo").attr("src","../img/logo-light.png"),
+	$("body").addClass("dark");
+	$(".header-bg").addClass("dark");
+
 }
 
 /************* .main-slide **************/
