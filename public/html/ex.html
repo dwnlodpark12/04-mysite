@@ -27,6 +27,27 @@
      transition: all 1s;
    }
    ul.hide > li {display: none;}
+   .img-folder {}
+   .img-folder .test1 {
+   position: relative;
+   border: 10px solid rebeccapurple;
+   }
+   .img-folder .test1 img.bg {
+     border: 2px solid red;
+   }
+   .img-folder .test1 .hover {
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    line-height: 75px;
+    padding: 10px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+   }
   </style>
 </head>
 <body>
@@ -68,13 +89,18 @@
     </ul>
 </div>
 <div class="img-folder">
-  <img src="../img/link_white.svg" alt="" class="w-25">
-  <img src="../img/moon_white.svg" alt="" class="w-25">
+<div class="test1">
+    <img src="../img/shop-product-16-362x476.jpg" alt="" class="w-25 bg">
+    <div class="hover">예쁘다ㅇㅅㅇ</div>
+</div>   
+<img src="../img/moon_white.svg" alt="" class="w-25">
   <img src="../img/sun_white.svg" alt="" class="w-25">
   <img src="../img/white.png" alt="" class="w-25">
   <img src="../img/arrow_left_white.svg" alt="" class="w-25">
   <img src="../img/arrow_white.svg" alt="" class="w-25">
 </div>
+
+
 </body>
   <script>
     $(function() {
