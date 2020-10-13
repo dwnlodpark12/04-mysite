@@ -18,8 +18,15 @@ function onDarkMode() {
 		"left":"26px",
 		"background-color":"inherit",
 		"border":"1px solid #fff"
-});
-	$("body").toggleClass("dark-mode");
+	});
+	$(this).find(".switch").css("border-color","#fff"),
+	$(this).find("img.sun-w").attr("src","../img/sun_white.svg"),
+	$(this).find("img.moon-w").attr("src","../img/moon_white.svg"),
+	$(".tab-bar").find(".bar").css("border-color","#fff"),
+	$(".logo-wrap").find(".logo").attr("src","../img/logo-light.png"),
+	$("body").addClass("dark");
+	$(".header-bg").addClass("dark");
+
 }
 
 /************* .main-slide **************/
@@ -73,9 +80,19 @@ function popLeave() {
 	$(this).find(".img-hover").css("display", "none");
 }
 
+
+
 $(".play-wrap .play").mousemove(function(e){
 	var x = e.offsetX;
 	var y = e.offsetY;
-	$(this).css({"left": x+"px", "top": y+"px"});
-	console.log(x, y);
+	var wid = $(this).outerWidth() / 2;
+	var hei = $(this).outerHeight() / 2;
+	var tarX = x - wid;
+	var tarY = y - hei;
+	if(tarX > -300 && tarX < 300 && tarY > -150 && tarY < 150) {
+		$(this).css("transform", "translate("+tarX+"px,"+tarY+"px)");
+	}
+	else {
+		$(this).css("transform", "translate(0, 0)");
+	}
 });
