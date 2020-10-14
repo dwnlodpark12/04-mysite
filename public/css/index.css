@@ -324,7 +324,6 @@ span.pager {
 }
 .selection-wrapper ul.lists li.list {
 	margin-bottom: 40px;
-	transition: all 1s;
 }
 .selection-wrapper ul.lists li.list a {
 	display: block;
@@ -360,14 +359,17 @@ span.pager {
 	font-size: 0.75rem;
 	font-weight: 500;
 	color: #333;
-	display: none;
+	opacity: 0;
 	transition: all 0.5s;
+}
+
+.selection-wrapper ul.lists li.list:hover .add-cart {
+	opacity: 1;
 }
 
 .selection-wrapper ul.lists li.list .img-wrap .add-cart:hover {
 	background-color: #000;
 	color: #f8f8f8;
-
 }
 .selection-wrapper ul.lists li.list .txt-wrap {
 	margin-top: 16px;

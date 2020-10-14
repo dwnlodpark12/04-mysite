@@ -1,3 +1,4 @@
+var sctop;
 
 /************* 네비게이션 **************/
 $("li.navi").mouseenter(onEnter);
@@ -54,6 +55,7 @@ $(window).scroll(function () {
 
 /************* selection hover **************/
 
+/*
 $("li.list").mouseenter(listEnter);
 $("li.list").mouseleave(listLeave);
 
@@ -63,7 +65,7 @@ function listEnter(){
 function listLeave(){
 	$(this).find(".add-cart").stop().fadeOut(500);
 } 
-
+*/
 
 /************* play mouseAni **************/
 
@@ -101,22 +103,19 @@ function popLeave() {
 
 /************* back-to-top **************/
 
-$(window).scroll(function() {
-	var sctop = $(document).scrollTop();
 
+$(window).scroll(function() {
+	sctop = $(document).scrollTop();
 	if(sctop<=500) {
-		$(".back-top").fadeOut(200);
+		$(".back-top").stop().fadeOut(200);
 	}
 	else {
-		$(".back-top").fadeIn(200);
+		$(".back-top").stop().fadeIn(200);
 	}
 });
 
 
 $(".back-top").click(onTopClick);
 function onTopClick() {
-	var sctop = $(document).scrollTop();
-
 	$('html,body').animate({scrollTop:0},500);
-	return
 }
