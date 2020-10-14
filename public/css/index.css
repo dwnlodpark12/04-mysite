@@ -324,6 +324,7 @@ span.pager {
 }
 .selection-wrapper ul.lists li.list {
 	margin-bottom: 40px;
+	transition: all 1s;
 }
 .selection-wrapper ul.lists li.list a {
 	display: block;
@@ -360,15 +361,13 @@ span.pager {
 	font-weight: 500;
 	color: #333;
 	display: none;
-	transition: all 0.3s;
+	transition: all 0.5s;
 }
-.selection-wrapper ul.lists li.list:hover .img-wrap .add-cart {
-	display: block;
-	
-}
+
 .selection-wrapper ul.lists li.list .img-wrap .add-cart:hover {
 	background-color: #000;
 	color: #f8f8f8;
+
 }
 .selection-wrapper ul.lists li.list .txt-wrap {
 	margin-top: 16px;
@@ -630,6 +629,8 @@ footer .f-right ul.f-lists li.list ul.contents li.circle:last-child {
 	bottom: 20%; right: 2%;
 	padding: 0.5rem;
 	white-space: nowrap;
+	display: none;
+	cursor: pointer;
 }
 
 
