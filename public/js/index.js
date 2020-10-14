@@ -114,7 +114,6 @@ $(window).scroll(function() {
 	}
 });
 
-
 $(".back-top").click(onTopClick);
 function onTopClick() {
 	$('html,body').animate({scrollTop:0},500);
