@@ -102,16 +102,21 @@ function popLeave() {
 /************* back-to-top **************/
 
 $(window).scroll(function() {
+	var sctop = $(document).scrollTop();
+
 	if(sctop<=500) {
-		$(".back-top").fadeIn(200);
+		$(".back-top").fadeOut(200);
 	}
 	else {
-		$(".back-top").fadeOut(200);
+		$(".back-top").fadeIn(200);
 	}
 });
 
 
 $(".back-top").click(onTopClick);
 function onTopClick() {
-	$('html,body').animate({scrollTop},500);
+	var sctop = $(document).scrollTop();
+
+	$('html,body').animate({scrollTop:0},500);
+	return
 }
