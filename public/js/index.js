@@ -12,6 +12,20 @@ function onLeave() {
 	$(this).children(".navi-lists").stop().slideUp();
 }
 
+
+/* 
+$("li.navi-list").mouseenter(onSubEnter);
+$("li.navi-list").mouseleave(onSubLeave);
+
+function onSubEnter() {
+	$(this).find("ul.sub-navi-wrap").stop().fadeIn(200);
+}
+
+function onSubLeave() {
+	$(this).children("ul.sub-navi-wrap").stop().fadeOut(200);
+}
+ */
+
 /************* dark-mode **************/
 $(".dark-mode").click(onDarkMode);
 

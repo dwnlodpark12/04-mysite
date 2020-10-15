@@ -78,13 +78,14 @@ body.dark {
 	display: flex;
 	flex-wrap: wrap;
 }
-.header-bottom .hb-left ul.navi-wrap li {
+.header-bottom .hb-left ul.navi-wrap li.navi {
 	margin-right: 35px;
 	font-size: 14px;
 	font-weight: 400;
 	/* transition: all 0.9s; */
 	position: relative;
 	cursor: pointer;
+	
 }
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists {
 	position: absolute;
@@ -106,9 +107,26 @@ body.dark {
 	padding: 0.5rem 0;
 	transition: all 1s;
 	box-sizing: border-box;
+
 }
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list::after {
 	
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list ul.sub-navi-wrap {
+	position: absolute;
+	width: 16vw;
+	top: 0; right: -100%;
+	padding: 2rem;
+	font-size: 1rem;
+	background-color: #fff;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list ul.sub-navi-wrap li.sub-navi {
+	line-height: 2.2;
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list:hover ul.sub-navi-wrap {
+	opacity: 1;
 }
 
 
