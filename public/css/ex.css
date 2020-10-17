@@ -215,7 +215,7 @@ body.dark {
 .main-wrapper .main-left {
 	width: 49%;
 	height: inherit;
-	border-right: 1px solid #000;
+	border-right: 1px solid #000; 
 	box-sizing: border-box;
 }
 .main-wrapper .main-left .main-img {
@@ -248,6 +248,35 @@ body.dark {
 }
 .main-wrapper .main-img .new:hover {
 	font-style: normal;
+}
+
+.main-wrapper .main-right {
+	width: 50%;
+	position: relative;
+	border: 10px solid red;
+
+}
+.main-right .stage {
+	position: absolute;
+	overflow: hidden;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+.main-right .stage .slide-wrap {}
+.main-right .stage .slide-wrap .slide {}
+.main-right .stage .slide-wrap .slide img {}
+.main-right .stage .slide-wrap .slide .txt-wrap {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l .txt-title {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l .txt-categ {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-price {}
+
+.main-right .stage .pager-wrap {}
+.main-right .stage .pager-wrap .pager {
+}
+.main-right .stage .pager-wrap .pager.active {
+	color: red;
 }
 
 
