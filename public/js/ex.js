@@ -104,16 +104,6 @@ var slides = [
 		interval = setInterval(onNext, 3000);
 	}
 
-	function onPrev() {
-		target = '100%';
-		idx = (idx == 0) ? lastIdx : idx - 1;
-		ani();
-	}
-	function onNext() {
-		target = '-100%';
-		idx = (idx == lastIdx) ? 0 : idx + 1;
-		ani();
-	}
 
 	function onPagerClick() {
 		idx = $(this).index();
