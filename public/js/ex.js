@@ -113,7 +113,7 @@ var slides = [
 	function ani() {
 		$pager.removeClass("active")
 		$pager.eq(idx).addClass("active");
-		$($slides[idx].clone()).appendTo($slideWrap).animate({"opacity":1},500, slideInit);
+		$($slides[idx].clone().css({"position": "absolute", "top":0, "opacity": 0})).appendTo($slideWrap).animate({"opacity":1},500, slideInit);
 	}
 	init();
 })(); 
