@@ -69,7 +69,10 @@ var slides = [
     var html,i;
     for (i in slides) {
       html = '<div class="slide">'
-      html += '<img class="w-100" src="'+slides[i].src+'">';
+			html += '<img class="w-100" src="'+slides[i].src+'">';
+			
+      html += '<div class="add-cart">ADD TO CART</div>';
+			
       html += '<div class="txt-wrap">'
       html += '<div class="txt-l">'
       html += '<div class="txt-title">'+slides[i].title+'</div>';
@@ -80,14 +83,14 @@ var slides = [
 			html += '</div>';  /* /.slide */
       $slides[i] = $(html);
 
-      html = '<span class="pager">●</span>'; 
+      html = '<span class="pager"></span>'; 
 			 $pagerWrap.append(html); 
 			}
 
 		$pager = $pagerWrap.find(".pager");
 		$pager.click(onPagerClick).eq(idx).addClass("active");
 		slideInit();
-		interval = setInterval(onNext, 3000);
+		interval = setInterval(onInterval, 4000);
 	}
 
 	function slideInit() {
@@ -101,7 +104,7 @@ var slides = [
 		clearInterval(interval);
 	}
 	function onLeave() {
-		interval = setInterval(onNext, 3000);
+		interval = setInterval(onInterval, 4000);
 	}
 
 
@@ -110,67 +113,19 @@ var slides = [
 		ani();
 	}
 
+	function onInterval() {
+		idx = (idx == lastIdx) ? 0 : idx + 1;
+		ani();
+	}
+
 	function ani() {
-		$pager.removeClass("active")
+		$pager.removeClass("active");
 		$pager.eq(idx).addClass("active");
-		$($slides[idx].clone().css({"position": "absolute", "top":0, "opacity": 0})).appendTo($slideWrap).animate({"opacity":1},500, slideInit);
+
+		$($slides[idx].clone()).appendTo($slideWrap).addClass("active").animate({"opacity":1},500, slideInit);
+/* 		$(".txt-wrap").removeClass("active")
+		$(".txt-wrap").eq[idx].addClass("active") */
+		/* .css({"position": "absolute", "top":0, "opacity": 0})) */
 	}
 	init();
 })(); 
-
-
-/* 
- function init() {
-    var html,i;
-    for (i in slides) {
-      html = '<div class="slide">'
-      html += '<img class="w-100" src="'+slides[i].src+'">';
-      html += '</div>';
-      $slides[i] = $(html);
-
-      html = '<div class="txt-l">'
-      html += '<div class="txt-title">'+slides[i].title+'</div>';
-      html += '<div class="txt-categ">'+slides[i].categ+'</div>';
-      html += '</div>';
-      html += '<div class="txt-price">'+slides[i].price+'</div>';
-      $txtWrap.append(html);
-
-      html = '<span class="pager">●</span>'; 
-       $pagerWrap.append(html); 
-    }
-    $pager = $pagerWrap.find(".pager");
-    $pager.click(onPagerClick).eq(idx).addClass("active");
-		slideInit();
-		interval = setInterval(onNext, 3000); 
-  }
-
-  function slideInit() {
-    $slideWrap.html($slides[idx].clone());
-	}
-	
-	$slideStage.mouseover(onHover);
-	$slideStage.mouseleave(onLeave);
-
-	function onHover() {
-		clearInterval(interval);
-	}
-
-	function onLeave() {
-		interval = setInterval(onNext, 3000);
-	}
-
-	function onPagerClick() {
-		idx = $(this).index();
-		ani();
-	}
-
-	function ani() {
-		$pager.removeClass("active").eq(idx).addClass("active");
-		$($slides[idx].clone()).appendTo($slideWrap).stop().animate({"opacity": 1}, 500, slideInit);
-	}
-	init();
-})(); 
- 
-
-
-*/

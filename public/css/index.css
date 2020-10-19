@@ -251,40 +251,56 @@ body.dark {
 }
 .main-wrapper .main-right {
 	width: 50%;
-	height: inherit;
 	position: relative;
-}
-.main-wrapper .main-right .slide-wrap {
-	width: 19vw;
-	height: inherit;
-	position: absolute;
-	top: 8vw; left: calc(50% - 9vw);
-}
 
-.main-wrapper .main-right .slide-wrap .slide {
-	border: 2px solid rebeccapurple;
 }
-.main-wrapper .main-right .slide-wrap .slide .txt-wrap {
+.main-right .stage {
+	
+}
+.main-right .stage .slide-wrap {
+	position: absolute;
+	overflow: hidden;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	cursor: pointer;
+}
+	.main-right .stage .slide-wrap .slide {}
+	.main-right .stage .slide-wrap .slide.active {position: absolute; top: 0; opacity: 0;}
+	.main-right .stage .slide-wrap .slide img {}
+	.main-right .stage .slide-wrap .slide .txt-wrap {
+	margin-top: 0.75rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 0.875rem;
 }
-.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l {
-
+.main-right .stage .slide-wrap .slide .txt-wrap.active {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l {
+	line-height: 2;
 }
-.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l h3.img-title {
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l .txt-title {
 	font-family: 'Playfair Display', serif;
 	font-size: 1.25rem;
-
+	font-weight: 300;
 }
-.main-wrapper .main-right .slide-wrap .slide .txt-wrap .txt-l .img-categ {
-	padding: 0.75rem 0;
-}
-.main-wrapper .main-right .slide-wrap .slide .txt-wrap .img-price {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-l .txt-categ {}
+.main-right .stage .slide-wrap .slide .txt-wrap .txt-price {}
 
-span.pager {
-	width: 100vh;
+.main-right .stage .pager-wrap {
+	position: absolute;
+	bottom: 2rem; right: 2.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.main-right .stage .pager-wrap .pager {
+	width: 0.875rem;
+	height: 0.875rem;
+	background-color: #f8f8f8;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin: 0.375rem;
+}
+.main-right .stage .pager-wrap .pager.active {
+	background-color: #000;
 }
 
 
