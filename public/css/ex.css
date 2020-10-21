@@ -266,13 +266,12 @@ body.dark {
 	cursor: pointer;
 }
 .main-right .stage .slide-wrap .slide {
-	border: 2px solid rebeccapurple;
 	position: relative;
 }
 .main-right .stage .slide-wrap .slide.active {position: absolute; top: 0; opacity: 0;}
 .main-right .stage .slide-wrap .slide img {}
 .main-right .stage .slide-wrap .slide .add-cart {
-		position: absolute;
+	position: absolute;
 		bottom: 15%; left: 50%;
 		transform: translateX(-50%);
 		padding: 0.875em 2.5em;
@@ -280,10 +279,16 @@ body.dark {
 		font-size: 0.875rem;
 		font-weight: 400;
 		color: #333;
-		/* opacity: 0; */
+		opacity: 0;
 		transition: all 0.5s;
-		border: 1px solid #000;
 	}
+	.main-right .stage .slide-wrap:hover .slide .add-cart {
+		opacity: 1;
+	}
+.main-right .stage .slide-wrap .slide .add-cart:hover {
+	background-color: #000;
+	color: #f8f8f8;
+}
 .main-right .stage .slide-wrap .slide .txt-wrap {
 	margin-top: 0.75rem;
 	display: flex;
