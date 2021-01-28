@@ -78,33 +78,37 @@ html, body {
 	margin-right: 35px;
 	font-size: 14px;
 	font-weight: 400;
-	/* transition: all 0.9s; */
+	transition: all 0.5s;
 	position: relative;
 	cursor: pointer;
-	
 }
+.header-bottom .hb-left ul.navi-wrap li.navi:hover >div {
+	color: #0000c5;
+}
+
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists {
 	position: absolute;
-	left: -50%;
+	left: 0;
 	z-index: 2;
 	background-color: #fff;
-	opacity: 0.9;
-	top: 66px;
-	width: 300px;
-	padding: 32px;
+	opacity: 0.8;
+	top: 4rem;
+	width: 22vw;
+	padding: 2rem;
 	display: none;
-
 }
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.5rem 0;
+	line-height: 2;
 	transition: all 1s;
 	box-sizing: border-box;
-
+}
+.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list:hover {
+	color: #0000c5;
 }
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list::after {
 	
@@ -112,7 +116,7 @@ html, body {
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list ul.sub-navi-wrap {
 	position: absolute;
 	width: 16vw;
-	top: 0; right: -100%;
+	top: 0; left: 100%;
 	padding: 2rem;
 	font-size: 1rem;
 	background-color: #fff;
@@ -632,9 +636,10 @@ footer .f-right ul.f-lists {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+	margin-top: 2rem;
 }
 footer .f-right ul.f-lists li.list {
-	margin: 40px 100px 0 0;
+	flex: 25% 0 0;
 }
 footer .f-right ul.f-lists li.list .title {
 	font-family: 'Playfair Display', serif;
@@ -746,3 +751,4 @@ transition: all 0.3s;
 footer .f-right.dark {border-color: #fff;}
 footer .f-right ul.f-lists li.list ul.contents li.circle.dark {border-color: #fff;}
 .back-top.dark {border-color: #fff;}
+.underline.dark {border-color: #fff;}
