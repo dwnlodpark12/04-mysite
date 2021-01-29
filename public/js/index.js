@@ -51,7 +51,7 @@ function onDarkMode() {
 
 	$(".logo-wrap").find("img.logo").toggleClass("dark");
 	if($("img.logo").hasClass("dark")) {
-		$("img.logo").attr("src", "../img/logo-light.png");
+		$("img.logo").attr("src", "../img/logo-white.png");
 	}
 	else {
 		$("img.logo").attr("src", "../img/logo.png");
@@ -88,12 +88,13 @@ function onDarkMode() {
 
 	$(".f-left").find("img.f-logo").toggleClass("dark");
 	if($("img.f-logo").hasClass("dark")) {
-		$("img.f-logo").attr("src", "../img/footer-logo-light.png");
+		$("img.f-logo").attr("src", "../img/footer_logo_white.png");
 	}
 	else {
-		$("img.f-logo").attr("src", "../img/footer-logo.png");
+		$("img.f-logo").attr("src", "../img/footer_logo.png");
 	}
-	
+	$(".f-left").css("border-color","#fff");
+	$(".f-right").css("border-color","#fff");
 }
 
 
