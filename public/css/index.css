@@ -183,7 +183,7 @@ html, body {
 /********** main-visual **********/
 .main-wrapper {
 	width: 90vw;
-	border: 5px solid red;
+	border: 1px solid #000;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -227,7 +227,9 @@ html, body {
 	position: relative;
 
 }
-.main-right .stage {/* 높이 측정해서 넣어주기 */}
+.main-right .stage {
+	
+}
 
 .main-right .stage .slide-wrap {
 	position: absolute;
@@ -344,11 +346,12 @@ html, body {
 .selection-wrapper ul.lists {
 	width: 100%; height: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 .selection-wrapper ul.lists li.list {
-	margin-bottom: 40px;
+	flex: 23% 0 0;
+	margin: 1rem 1%;
 }
 .selection-wrapper ul.lists li.list a {
 	display: block;
@@ -361,14 +364,14 @@ html, body {
 	position: relative;
 }
 .selection-wrapper .list-wrap .img-wrapper .img-wrap img {
-	width: 18vw;
+	width: 100%;
 }
 .selection-wrapper .list-wrap .img-wrapper .img-wrap .sale {
 	position: absolute;
 	top: 0; right: 0;
 	transform-origin: top right;
 	width: 48px;
-	padding: 8px 8px;
+	padding: 8px;
 	background-color: #fff;
 	color: #000000;
 	text-align: center;
@@ -377,12 +380,14 @@ html, body {
 }
 .selection-wrapper ul.lists li.list .img-wrap .add-cart {
 	position: absolute;
+	width: 60%;
 	bottom: 0; left: 50%;
 	transform: translateX(-50%);
-	padding: 16px 32px;
+	padding: 1rem 2rem;
 	background-color: #f8f8f8;
-	font-size: 0.75rem;
+	font-size: 1vw;
 	font-weight: 500;
+	text-align: center;
 	color: #333;
 	opacity: 0;
 	transition: all 0.5s;
@@ -406,7 +411,7 @@ html, body {
 }
 .selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {
 	font-family: 'Playfair Display', serif;
-	font-size: 22px;
+	font-size: 1.75vw;
 	font-weight: 400;
 }
 .selection-wrapper ul.lists li.list .txt-wrap .txt-l .detail {}
@@ -532,16 +537,16 @@ html, body {
 /********** banner-wrap **********/
 .banner-wrap {
 	width: 90vw;
-	height: 320px;
-	margin: auto;
+	height: auto;
+	margin: 0 auto;
 	border: 1px solid #000;
-	margin-bottom: 160px;
+	margin-bottom: 10rem;
 	box-sizing: border-box;
 	display: flex;
 }
 
 .banner-wrap .bann-left {
-	width: 49%;
+	flex: 50% 0 0;
 	height: 100%;
 	border-right: 1px solid #000;
 	overflow: hidden;
@@ -550,26 +555,31 @@ html, body {
 	width: 100%;
 }
 .banner-wrap .bann-right {
-	width: 50%;
-	height: 100%;
+	flex: 50% 0 0;
 	position: relative;
-	top: 40%; left: 5%;
 }
-.banner-wrap .bann-right .summer {
-	margin-bottom: 16px;
+.banner-wrap .bann-right .bann-txt {
+	position: absolute;
+	bottom: 10%; left: 5%;
 }
-.banner-wrap .bann-right .summer .dot {
+.banner-wrap .bann-right .winter {
+	margin-bottom: 0.75rem;
+	font-size: 0.875rem;
+}
+.banner-wrap .bann-right .winter .dot {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
 	background-color: #000;
 	display: inline-block;
-	margin-right: 5px;
+	margin-right: 0.475rem;
 }
 .banner-wrap .bann-right .miss {
 	font-family: 'Playfair Display', serif;
-	font-size: 40px;
-	line-height: 1.2;
+	font-size: 2.5rem;
+	line-height: 1.1;
+	
+
 }
 
 
@@ -583,7 +593,7 @@ footer {
 
 }
 footer .f-left {
-	width: 33.3333%;
+	flex: 33.3333% 0 0;
 	padding: 40px;
 
 }
@@ -600,12 +610,12 @@ footer .f-left .copy {
 }
 
 footer .f-right {
-	width: 66.6666%;
+	flex: 66.6666% 0 0;
 	border-top: 1px solid #000;
 }
 footer .f-right ul.f-lists {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 2rem;
 }
@@ -629,6 +639,7 @@ footer .f-right ul.f-lists li.list:last-child ul.contents {
 
 footer .f-right ul.f-lists li.list ul.contents li.cont {
 	cursor: pointer;
+	line-height: 1.5;
 }
 
 footer .f-right ul.f-lists li.list ul.contents li.circle {
@@ -718,7 +729,7 @@ transition: all 0.3s;
 .pop-wrapper ul.pop-wrap li.pop.dark {border-color: #fff;}
 .banner-wrap.dark {border-color: #fff;}
 .banner-wrap .bann-left.dark {border-color: #fff;}
-.banner-wrap .bann-right .summer .dot.dark {background-color: #fff;}
+.banner-wrap .bann-right .winter .dot.dark {background-color: #fff;}
 footer .f-right.dark {border-color: #fff;}
 footer .f-right ul.f-lists li.list ul.contents li.circle.dark {border-color: #fff;}
 .back-top.dark {border-color: #fff;}
@@ -730,12 +741,20 @@ footer .f-right ul.f-lists li.list ul.contents li.circle.dark {border-color: #ff
 @media screen and (max-width: 991px) {
 	.header-bg {display: none;}
 	.header-bottom .hb-left ul.navi-wrap {display: none;}
-	.header-bottom .hb-right .bag {display:none;}
+	.header-bottom .hb-right .bag {display: none;}
 
 	.main-wrapper {flex-direction: column;}
-	.main-wrapper .main-left {flex: 100% 0 0;}
-	.main-wrapper .main-right {flex: 100% 0 0; height: 881px; border: 2px solid blue;}
+	.main-wrapper .main-left {flex: 100% 0 0; border-right: 0; border-bottom: 1px solid #000;}
+	.main-wrapper .main-right {flex: 100% 0 0; height: 881px;}
+	.main-right .stage {height: 90%;}
+	.selection-wrapper ul.lists li.list {flex: 31.3333% 0 0; margin: 1rem 1%;}
 
+footer .f-left {flex: 92% 0 0; margin: 0 4%; padding-bottom: 0; border-top: 1px solid #000;}
+footer .f-right {flex: 90% 0 0; margin: 0 5%; border: 0;}
+	footer .f-right ul.f-lists li.list {flex: 50% 0 0; margin-top: 2rem;}
 }
-@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 767px) {
+	.selection-wrapper ul.lists li.list {flex: 46% 0 0; margin: 1rem 2%;}
+}
 @media screen and (max-width: 575px) {}

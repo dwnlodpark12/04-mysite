@@ -101,10 +101,10 @@ function onDarkMode() {
 /************* .main-slide **************/
 (function(){
 	var slides = [
-		{id: 0, src: '../img/right_slide01.jpg', title: 'Red Watch', categ:'Digital', price:'45.50€'},
-		{id: 1, src: '../img/right_slide02.jpg', title: 'Sweater Print', categ:'Urban', price:'45.50€'},
-		{id: 2, src: '../img/right_slide03.jpg', title: 'Framed Poster', categ:'Vision', price:'45.50€'},
-		{id: 3, src: '../img/right_slide04.jpg', title: 'Trendy Bags', categ:'Creative', price:'45.50€'}
+		{id: 0, src: '../img/right_slide01.jpg', title: 'Triple fox head Tshirts', categ:'Top', price:'$155.65'},
+		{id: 1, src: '../img/right_slide02.jpg', title: 'Triple fox sweatshirt', categ:'Knitwear', price:'$303.48'},
+		{id: 2, src: '../img/right_slide03.jpg', title: 'Triple fox badge', categ:'Accessories', price:'$36.52'},
+		{id: 3, src: '../img/right_slide04.jpg', title: 'A kitsune cap', categ:'Headwear', price:'$120.87'}
 	];
 	
 	
