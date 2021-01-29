@@ -78,7 +78,7 @@ html, body {
 	margin-right: 35px;
 	font-size: 14px;
 	font-weight: 400;
-	transition: all 0.5s;
+	transition: all 0.3s;
 	position: relative;
 	cursor: pointer;
 }
@@ -93,7 +93,7 @@ html, body {
 	background-color: #fff;
 	opacity: 0.8;
 	top: 4rem;
-	width: 22vw;
+	width: 300px;
 	padding: 2rem;
 	display: none;
 }
@@ -104,31 +104,13 @@ html, body {
 	justify-content: space-between;
 	align-items: center;
 	line-height: 2;
-	transition: all 1s;
+	transition: all 0.3s;
 	box-sizing: border-box;
 }
 .header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list:hover {
 	color: #0000c5;
 }
-.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list::after {
-	
-}
-.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list ul.sub-navi-wrap {
-	position: absolute;
-	width: 16vw;
-	top: 0; left: 100%;
-	padding: 2rem;
-	font-size: 1rem;
-	background-color: #fff;
-	opacity: 0;
-	transition: all 0.5s;
-}
-.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list ul.sub-navi-wrap li.sub-navi {
-	line-height: 2.5;
-}
-.header-bottom .hb-left ul.navi-wrap li ul.navi-lists li.navi-list:hover ul.sub-navi-wrap {
-	opacity: 1;
-}
+
 
 
 
@@ -201,30 +183,20 @@ html, body {
 /********** main-visual **********/
 .main-wrapper {
 	width: 90vw;
-	max-width: 100%;
-	height: auto;
-	border: 1px solid #000000;
-	box-sizing: border-box;
+	border: 5px solid red;
 	margin: 0 auto;
-	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
-	
 }
 .main-wrapper .main-left {
-	width: 49%;
-	height: inherit;
-	border-right: 1px solid #000; 
-	box-sizing: border-box;
+	flex: 50% 0 0;
+	border-right: 1px solid #000;
 }
 .main-wrapper .main-left .main-img {
 	position: relative;
-	color: #333;
+	color: #111;
 }
-.main-wrapper .main-left .main-img img {
-	width: 100%;
-	height: auto;
-}
+
 .main-wrapper .main-left .title {
 	position: absolute;
 	bottom: 30%; left: 8%;
@@ -251,13 +223,12 @@ html, body {
 }
 
 .main-wrapper .main-right {
-	width: 50%;
+	flex: 50% 0 0;
 	position: relative;
 
 }
-.main-right .stage {
-	
-}
+.main-right .stage {/* 높이 측정해서 넣어주기 */}
+
 .main-right .stage .slide-wrap {
 	position: absolute;
 	overflow: hidden;
@@ -702,7 +673,7 @@ body.dark {
 	border-color: #fff;
 }
 .header-bottom .hb-right .dark-mode .switch .dot.dark {
-left: 26px;
+	left: 26px;
 background-color: #1d1d1d;	
 border: 1px solid #f8f8f8;
 transition: all 0.3s;
@@ -752,3 +723,19 @@ footer .f-right.dark {border-color: #fff;}
 footer .f-right ul.f-lists li.list ul.contents li.circle.dark {border-color: #fff;}
 .back-top.dark {border-color: #fff;}
 .underline.dark {border-color: #fff;}
+
+
+/************* 반응형 *************/
+@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 991px) {
+	.header-bg {display: none;}
+	.header-bottom .hb-left ul.navi-wrap {display: none;}
+	.header-bottom .hb-right .bag {display:none;}
+
+	.main-wrapper {flex-direction: column;}
+	.main-wrapper .main-left {flex: 100% 0 0;}
+	.main-wrapper .main-right {flex: 100% 0 0; height: 881px; border: 2px solid blue;}
+
+}
+@media screen and (max-width: 767px) {}
+@media screen and (max-width: 575px) {}

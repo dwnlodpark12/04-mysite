@@ -71,7 +71,7 @@ function onDarkMode() {
 	$(".pop-wrapper h2").toggleClass("dark"); 
 	$("li.pop").toggleClass("dark"); 
 
-	$(".arrows").find("img.arrow").hasClass("dark");
+	$("img.arrow").toggleClass("dark");
 	if($("img.arrow").hasClass("dark")) {
 		$("img.arrow").attr("src", "../img/arrow_white.svg");
 	}
@@ -101,10 +101,10 @@ function onDarkMode() {
 /************* .main-slide **************/
 (function(){
 	var slides = [
-		{id: 0, src: '../img/main1-1.jpg', title: 'Red Watch', categ:'Digital', price:'45.50€'},
-		{id: 1, src: '../img/main1-2.jpg', title: 'Sweater Print', categ:'Urban', price:'45.50€'},
-		{id: 2, src: '../img/main1-3.jpg', title: 'Framed Poster', categ:'Vision', price:'45.50€'},
-		{id: 3, src: '../img/main1-4.jpg', title: 'Trendy Bags', categ:'Creative', price:'45.50€'}
+		{id: 0, src: '../img/right_slide01.jpg', title: 'Red Watch', categ:'Digital', price:'45.50€'},
+		{id: 1, src: '../img/right_slide02.jpg', title: 'Sweater Print', categ:'Urban', price:'45.50€'},
+		{id: 2, src: '../img/right_slide03.jpg', title: 'Framed Poster', categ:'Vision', price:'45.50€'},
+		{id: 3, src: '../img/right_slide04.jpg', title: 'Trendy Bags', categ:'Creative', price:'45.50€'}
 	];
 	
 	
@@ -134,7 +134,7 @@ function onDarkMode() {
 				$slides[i] = $(html);
 	
 				html = '<span class="pager"></span>'; 
-				 $pagerWrap.append(html); 
+				$pagerWrap.append(html); 
 				}
 	
 			$pager = $pagerWrap.find(".pager");
