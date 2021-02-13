@@ -97,7 +97,23 @@ function onDarkMode() {
 	$(".f-right").css("border-color","#fff");
 }
 
+/************* .modal-wrapper **************/
+$(".tab-bar").click(onModalClick);
 
+function onModalClick() {
+	$(".modal-wrapper").css("display","block");
+	$(".modal-wrapper").css("background-color");
+	$(".modal-wrapper").css("background-color","rgba(0,0,0,0.4)");
+	$(".modal-wrap").css("right",0);
+}
+
+$(".x-button").click(onModalClose);
+
+function onModalClose() {
+	$(".modal-wrapper").css("background-color","rgba(0,0,0,0)");
+	$(".modal-wrapper").delay(500).hide(0);
+	$(".modal-wrap").css("right","-30vw");
+}
 
 /************* .main-slide **************/
 (function(){

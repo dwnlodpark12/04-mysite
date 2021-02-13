@@ -180,6 +180,26 @@ html, body {
 }
 
 
+/****** modal-wrapper ******/
+
+.modal-wrapper {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 100; background-color: rgba(0,0,0,0); transition: bacground-color 0.5s; display: none;}
+.modal-wrap {width: 30vw;; height: 100%; position: absolute; top: 0; right: -30vw; background-color: #f8f8f8; color: #212529; font-family: 'Playfair Display', serif; transition: right 0.5s;}
+.modal-wrap .x-button {text-align: right; cursor: pointer;}
+.modal-wrap .x-button img {margin: 2.5rem;}
+.modal-wrap .m-logo {text-align: center; margin-bottom: 2.5rem;}
+.modal-wrap .m-logo img {width: 200px;}
+.modal-wrap .title {font-size: 1vw; margin: 0 0 1rem 2rem;}
+.modal-wrap .insta-wrap {margin: 0 auto;}
+.modal-wrap .insta-wrap ul.instas {display: flex; flex-wrap: wrap;}
+.modal-wrap .insta-wrap ul.instas li.insta {flex:36% 0 0; margin: 0 7%; overflow: hidden;}
+.modal-wrap .insta-wrap ul.instas li.insta img {transition: all 0.3s;}
+.modal-wrap .insta-wrap ul.instas li.insta img:hover {transform: scale(1.1);}
+
+.modal-wrap .cnt-wrap .add-wrap {font-family: 'Roboto', sans-serif; margin: 1rem 0 2rem 3rem; line-height: 1.7;}
+
+.modal-wrap .else-wrap ul.sns-wrap {display: flex; margin-left: 2rem;}
+.modal-wrap .else-wrap ul.sns-wrap li.sns {font-size: 0.75rem; margin: 0 1rem; border: 1px solid #000; border-radius: 100%; padding: 1.25rem; transition: all 0.4s;}
+.modal-wrap .else-wrap ul.sns-wrap li.sns:hover {background-color: #212529; color: #f8f8f8;}
 /********** main-visual **********/
 .main-wrapper {
 	width: 90vw;
@@ -756,5 +776,20 @@ footer .f-right {flex: 90% 0 0; margin: 0 5%; border: 0;}
 
 @media screen and (max-width: 767px) {
 	.selection-wrapper ul.lists li.list {flex: 46% 0 0; margin: 1rem 2%;}
+	.banner-wrap .bann-left {flex: 100% 0 0; border-right: 0; border-bottom: 1px solid #000;}
+	.banner-wrap .bann-right {flex: 100% 0 0; height: 50vw;}
+	.selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {font-size: 1rem;}
 }
-@media screen and (max-width: 575px) {}
+@media screen and (max-width: 575px) {
+	.main-wrapper .main-left .sel {font-size: 2.5rem; bottom: 18%;}	
+	.main-wrapper .main-left .new {font-size: 2rem;}	
+
+	.selection-wrapper ul.lists li.list {flex: 100% 0 0; margin: 1.5rem 0;}
+	.selection-wrapper ul.lists li.list .img-wrap .add-cart {width: 40%; font-size: 3vw;}
+	.selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {font-size: 1.25rem;}
+
+	.bann-right .bann-txt {top: 25%;}
+
+	footer .f-right ul.f-lists li.list {flex: 100% 0 0; margin: 0; margin-bottom: 1rem;}
+}
+
