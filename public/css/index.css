@@ -183,10 +183,25 @@ html, body {
 /****** modal-wrapper ******/
 
 .modal-wrapper {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 100; background-color: rgba(0,0,0,0); transition: bacground-color 0.5s; display: none;}
-.modal-wrap {width: 30vw;; height: 100%; position: absolute; top: 0; right: -30vw; background-color: #f8f8f8; color: #212529; font-family: 'Playfair Display', serif; transition: right 0.5s;}
-.modal-wrap .x-button {text-align: right; cursor: pointer;}
-.modal-wrap .x-button img {margin: 2.5rem;}
-.modal-wrap .m-logo {text-align: center; margin-bottom: 2.5rem;}
+.modal-wrap {width: 30vw; height: 100%; position: absolute; top: 0; right: -30vw; background-color: #f8f8f8; color: #212529; font-family: 'Playfair Display', serif; transition: right 0.5s; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+.modal-wrap.res {width: 100%; height: 50vh; top: -50vh; right: 0 !important; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; transition: top 0.5s;}
+.modal-wrap .m-logo {flex: 50% 0 0; text-align: center;}
+.modal-wrap .x-button {flex: 30% 0 0;}
+.modal-wrap .normal {flex: 98% 0 0; margin: 0 1%; margin-bottom: 10rem;}
+.modal-wrap.res .m-logo {flex: 50% 0 0; text-align: left; margin-top: 1rem; padding-left: 1rem;}
+.modal-wrap.res .x-button {flex: 50% 0 0;}
+.modal-wrap.res .respon {flex: 100% 0 0;}
+
+.modal-wrap .normal {display: block; letter-spacing: 1px;}
+.modal-wrap .respon {display: none;}
+.modal-wrap .respon ul {}
+.modal-wrap .respon ul li {font-size: 1.25rem; display: flex; justify-content: space-between; margin: 1rem 3rem; cursor: pointer;}
+.modal-wrap .respon ul li i {transition: all 0.5s;}
+.modal-wrap .respon ul li:hover i {transform: translate(1rem);}
+
+.modal-wrap .x-button {text-align: right; padding: 4rem 4rem 0 0; cursor: pointer;}
+.modal-wrap .x-button img {margin: 0 ;}
+.modal-wrap .m-logo {text-align: center; margin-top: 7rem;}
 .modal-wrap .m-logo img {width: 200px;}
 .modal-wrap .title {font-size: 1vw; margin: 0 0 1rem 2rem;}
 .modal-wrap .insta-wrap {margin: 0 auto;}
@@ -759,7 +774,7 @@ footer .f-right ul.f-lists li.list ul.contents li.circle.dark {border-color: #ff
 /************* 반응형 *************/
 @media screen and (max-width: 1199px) {}
 @media screen and (max-width: 991px) {
-	.header-bg {display: none;}
+	.header-bg {display: none; background-color: #f8f8f8;}
 	.header-bottom .hb-left ul.navi-wrap {display: none;}
 	.header-bottom .hb-right .bag {display: none;}
 
@@ -776,6 +791,7 @@ footer .f-right {flex: 90% 0 0; margin: 0 5%; border: 0;}
 
 @media screen and (max-width: 767px) {
 	.selection-wrapper ul.lists li.list {flex: 46% 0 0; margin: 1rem 2%;}
+	.banner-wrap {flex-wrap: wrap;}
 	.banner-wrap .bann-left {flex: 100% 0 0; border-right: 0; border-bottom: 1px solid #000;}
 	.banner-wrap .bann-right {flex: 100% 0 0; height: 50vw;}
 	.selection-wrapper ul.lists li.list .txt-wrap .txt-l .title {font-size: 1rem;}

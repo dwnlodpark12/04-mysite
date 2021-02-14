@@ -1,5 +1,5 @@
 /************* 전역변수 **************/
-var sctop;
+var sctop, winWid;
 
 /************* 네비게이션 **************/
 $("li.navi").mouseenter(onEnter);
@@ -101,19 +101,53 @@ function onDarkMode() {
 $(".tab-bar").click(onModalClick);
 
 function onModalClick() {
-	$(".modal-wrapper").css("display","block");
-	$(".modal-wrapper").css("background-color");
-	$(".modal-wrapper").css("background-color","rgba(0,0,0,0.4)");
-	$(".modal-wrap").css("right",0);
+	winWid = $(window).outerWidth();
+	console.log(winWid);
+	
+	if(winWid < 991 ) { /* 990 - 351 */
+	
+		$(".modal-wrap").find(".normal").css("display","none");
+		$(".modal-wrap").find(".respon").css("display","block");
+		$(".modal-wrapper").css("display","block");
+		$(".modal-wrapper").css("background-color");
+		$(".modal-wrapper").css("background-color","rgba(0,0,0,0.4");
+		$(".modal-wrap").css("top",0);
+		$(".modal-wrap").css("right",0);
+		$(".modal-wrap").addClass("res");
+		
+	}
+	else {/* 1920 - 991 까지 */
+		$(".modal-wrapper").css("display","block");
+		$(".modal-wrapper").css("background-color");
+		$(".modal-wrapper").css("background-color","rgba(0,0,0,0.4");
+		$(".modal-wrap").css("right",0);
+		$(".modal-wrap").css("top",0);
+		$(".modal-wrap").removeClass("res");
+		$(".modal-wrap").find(".respon").css("display","none");
+		$(".modal-wrap").find(".normal").css("display","block");
+
+	}
+
 }
 
 $(".x-button").click(onModalClose);
 
 function onModalClose() {
-	$(".modal-wrapper").css("background-color","rgba(0,0,0,0)");
-	$(".modal-wrapper").delay(500).hide(0);
-	$(".modal-wrap").css("right","-30vw");
+
+	if(winWid < 991 ){
+		$(".modal-wrapper").css("background-color","rgba(0,0,0,0)");
+		$(".modal-wrapper").delay(500).hide(0);
+		$(".modal-wrap").css("top","-50vh");
+		$(".modal-wrap").css("right","0");
+	}
+	else{
+		$(".modal-wrapper").css("background-color","rgba(0,0,0,0)");
+		$(".modal-wrapper").delay(500).hide(0);
+		$(".modal-wrap").css("right","-30vw");
+		$(".modal-wrap").css("top","0");
+	}
 }
+
 
 /************* .main-slide **************/
 (function(){
